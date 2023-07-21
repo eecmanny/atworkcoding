@@ -1,4 +1,4 @@
-var savedPoster = "";
+//var savedPoster = "";
 var savedTitle = "";
 var savedOverview = "";
 var savedGener = ""'
@@ -8,19 +8,24 @@ var saveBtn = document.querySelector(".movie-container1");
 saveBtn.addEventListener("click", function (event) {
   event.preventDefault();
   
-var poster1 = document.querySelector("#poster_path1);
+//var poster1 = document.querySelector("#poster_path1);
 var title1 = document.querySelector("#title1);
 var overview1 = document.querySelector("#overveiw1);
 var gener1 = document.querySelector("#genre1);
 
-  
-localStorage.setItem("poster", timerCount);
-localStorage.setItem("timerCount", timerCount);
-localStorage.setItem("timerCount", timerCount);  
-localStorage.setItem("timerCount", timerCount);
+//savedPoster.Push (poster1.value);
+savedTitle.Push (title1.value);
+savedOverview.Push (overview1.value);
+savedGener.Push (gener1.value);
 
-function displayTopScores() {
-  var topScores = JSON.parse(localStorage.getItem("TopScores"));
+  
+//localStorage.setItem("Poster", savedPoster);
+localStorage.setItem("Title", savedTitle);
+localStorage.setItem("Overview", savedOverview);  
+localStorage.setItem("Gener", savedGener);
+
+function displayMyWatchList() {
+  var savedforLaterTitle = JSON.parse(localStorage.getItem("Title"));
   var top10List = document.getElementById("top10");
   top10List.innerHTML = ""; // Clear the existing content of the list
 
