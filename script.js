@@ -1,22 +1,23 @@
-var saveBtn = document.querySelector(".submit");
+var savedPoster = "";
+var savedTitle = "";
+var savedOverview = "";
+var savedGener = ""'
+
+
+var saveBtn = document.querySelector(".movie-container1");
 saveBtn.addEventListener("click", function (event) {
   event.preventDefault();
+  
+var poster1 = document.querySelector("#poster_path1);
+var title1 = document.querySelector("#title1);
+var overview1 = document.querySelector("#overveiw1);
+var gener1 = document.querySelector("#genre1);
 
-  // Save Initials
-  var currentTime = localStorage.getItem("timerCount");
-  var typedInitials = document.getElementById("initials");
-
-  // var currentTime = localStorage.getItem("timerCount", timerCount);
-  // var typedInitials = document.getElementById("initials");
-
-  var combinedInitialAndNum = {
-    currentTime: currentTime,
-    typedInitials: typedInitials.value.trim()
-  };
-
-  localStorage.setItem("InitialAndNum", JSON.stringify(combinedInitialAndNum));
-  renderMessage();
-});
+  
+localStorage.setItem("poster", timerCount);
+localStorage.setItem("timerCount", timerCount);
+localStorage.setItem("timerCount", timerCount);  
+localStorage.setItem("timerCount", timerCount);
 
 function displayTopScores() {
   var topScores = JSON.parse(localStorage.getItem("TopScores"));
