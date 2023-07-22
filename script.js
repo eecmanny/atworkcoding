@@ -1,63 +1,92 @@
-//var savedPoster = "";
-var savedTitle = "";
-var savedOverview = "";
-var savedGener = ""'
+document.addEventListener('DOMContentLoaded', function () {
+  var movieContainers = document.querySelectorAll('.pick1');
 
+  function saveMovieToLocalStorage(title, overview, genre) {
+    if (typeof Storage !== 'undefined') {
+      let moviesData = JSON.parse(localStorage.getItem('movies')) || [];
 
-var saveBtn = document.querySelector(".movie-container1");
-saveBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  
-//var poster1 = document.querySelector("#poster_path1);
-var title1 = document.querySelector("#title1);
-var overview1 = document.querySelector("#overveiw1);
-var gener1 = document.querySelector("#genre1);
+      var movieData = {
+        title: title,
+        overview: overview,
+        genre: genre
+      };
 
-//savedPoster.Push (poster1.value);
-savedTitle.Push (title1.value);
-savedOverview.Push (overview1.value);
-savedGener.Push (gener1.value);
+      moviesData.push(movieData);
 
-  
-//localStorage.setItem("Poster", savedPoster);
-localStorage.setItem("Title", savedTitle);
-localStorage.setItem("Overview", savedOverview);  
-localStorage.setItem("Gener", savedGener);
-
-function displayMyWatchList() {
-  var savedforLaterTitle = JSON.parse(localStorage.getItem("Title"));
-  var top10List = document.getElementById("top10");
-  top10List.innerHTML = ""; // Clear the existing content of the list
-
-  // Loop through each score and create list items to display them
-  for (var i = 0; i < topScores.length; i++) {
-    var scoreItem = document.createElement("li");
-    scoreItem.textContent = topScores[i].typedInitials + " - " + topScores[i].currentTime;
-    top10List.appendChild(scoreItem);
+      localStorage.setItem('movies', JSON.stringify(moviesData));
+    } else {
+    }
   }
-}
 
-// Retrieve existing top scores from local storage
-function renderMessage() {
-  var allScores = JSON.parse(localStorage.getItem("InitialAndNum"));
-  if (allScores !== null) {
-    document.querySelector(".message").textContent = "You " + allScores.typedInitials +
-      " received a time of " + allScores.currentTime + ".";
-  }
-  // Add the current score to the top scores list
-  // Sort the top scores list based on the currentTime property in descending order
-  var topScores = JSON.parse(localStorage.getItem("TopScores")) || [];
-  topScores.push(allScores);
-  topScores.sort(function (a, b) {
-    return b.currentTime - a.currentTime;
+  movieContainers.forEach(container => {
+    container.addEventListener('click', function () {
+      var title = container.querySelector('#title1').textContent;
+      var overview = container.querySelector('#overview1').textContent;
+      var genre = container.querySelector('#genre1').textContent;
+
+      saveMovieToLocalStorage(title, overview, genre);
+    });
   });
+});
 
-  // Keep only the top 10 scores
-  topScores = topScores.slice(0, 10);
+document.addEventListener('DOMContentLoaded', function () {
+  var movieContainers = document.querySelectorAll('.pick2');
 
-  // Store the updated top scores list back to local storage
-  localStorage.setItem("TopScores", JSON.stringify(topScores));
+  function saveMovieToLocalStorage(title2, overview2, genre2) {
+    if (typeof Storage !== 'undefined') {
+      let moviesData = JSON.parse(localStorage.getItem('movies')) || [];
 
-  // Display the top scores in the top10 element
-  displayTopScores();
-}
+      var movieData = {
+        title2: title2,
+        overview2: overview2,
+        genre2: genre2
+      };
+
+      moviesData.push(movieData);
+
+      localStorage.setItem('movies', JSON.stringify(moviesData));
+    } else {
+    }
+  }
+
+  movieContainers.forEach(container => {
+    container.addEventListener('click', function () {
+      var title2 = container.querySelector('#title2').textContent;
+      var overview2 = container.querySelector('#overview2').textContent;
+      var genre2 = container.querySelector('#genre2').textContent;
+
+      saveMovieToLocalStorage(title2, overview2, genre2);
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var movieContainers = document.querySelectorAll('.pick3');
+
+  function saveMovieToLocalStorage(title3, overview3, genre3) {
+    if (typeof Storage !== 'undefined') {
+      let moviesData = JSON.parse(localStorage.getItem('movies')) || [];
+
+      var movieData = {
+        title3: title3,
+        overview3: overview3,
+        genre3: genre3
+      };
+
+      moviesData.push(movieData);
+
+      localStorage.setItem('movies', JSON.stringify(moviesData));
+    } else {
+    }
+  }
+
+  movieContainers.forEach(container => {
+    container.addEventListener('click', function () {
+      var title3 = container.querySelector('#title3').textContent;
+      var overview3 = container.querySelector('#overview3').textContent;
+      var genre3 = container.querySelector('#genre3').textContent;
+
+      saveMovieToLocalStorage(title3, overview3, genre3);
+    });
+  });
+});
