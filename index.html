@@ -1,74 +1,146 @@
-const inquirer = require('inquirer');
-const Logo = require('./lib/writeLogo');
-const fs = require('fs');
-// const {writeFile} = require('fs');
-const { Triangle, Square, Circle } = require('./lib/generateColor');
+<!DOCTYPE html>
+<html lang="en">
 
-const MyCompany = () =>
-    inquirer
-        .prompt([
-            {
-                type: 'list',
-                name: 'selectAll',
-                message: 'View all;?',
-                choices: ['Departments', 'Roles', 'Employee'],
-            },
-            {
-                type: 'input',
-                name: 'Color',
-                message: 'Please choose a logo color (Either, Color or Hexidecimal format)?',
-            },
-            {
-                type: 'input',
-                name: 'Text',
-                message: 'Please choose Choose three Characters?',
-            },
-            {
-                type: 'input',
-                name: 'TextColor',
-                message: 'Please choose a logo color (Either, Color or Hexidecimal format)?',
-            },
-        ])
-        .then((answers) => {
-            let logo;
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
 
-            switch (answers.Shape) {
-                case 'Circle':
-                    logo = new Circle();
-                    // console.log(data.Shape);
-                    // console.log(data.Color);
-                    // console.log(logo);
-                    break;
-                case 'Square':
-                    logo = new Square();
-                    break;
-                case 'Triangle':
-                    logo = new Triangle();
-                    break;
-                default:
-                    console.log('Shape not recognized');
-                    return;
-            }
+<Body>
+    <Header>
+        <H1 dir="website-p">
+            Website Portfolio
+            <img class="profileimage" src="./website-images/Profile Image.jpeg" alt="Profileimage">
+        </H1>
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 
-logo.setColor(answers.Color);
-            
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="https://bulma.io/">
+        Home
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
+          Docs
+        </a>
+        <div class="navbar-dropdown is-boxed">
+          <a class="navbar-item" href="https://bulma.io/documentation/overview/start/">
+            Overview
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/overview/modifiers/">
+            Modifiers
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+            Columns
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+            Layout
+          </a>
+          <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+            Form
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">
+            Elements
+          </a>
+          <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">
+            Components
+          </a>
+        </div>
+      </div>
+    </div>
 
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span>
+                Tweet
+              </span>
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.9.4/bulma-0.9.4.zip">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+              <span>Download</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </Header>
+    <P class="bio">
+        <H1 class="bio-p">About Me</H1>
+        <H2 class="bio-p">
+            Welcome to my online portfolio! I am Emmanuel Cordero, and I am thrilled to share my creative journey with you. As an Engineering Technician and a Real Estate Sales Associate, I have dedicated myself to honing my skills and exploring the vast world of Web Development. With a passion for mathematics, helping people, advertising, and making processes more efficient, I strive to create compelling and impactful web development experiences. Through this portfolio, I invite you to delve into my projects and witness the culmination of my dedication, creativity, and unwavering commitment to excellence! 
+        </H2>
+    </P>
 
-            const pLogoContent = new Logo();
-            pLogoContent.setText(answers.Text, answers.TextColor);
-            pLogoContent.setShape(logo);
-
-            console.log(answers);
-
-            fs.writeFile('logo.svg', pLogoContent.render(), (err) =>
-                err ? console.log(err) : console.log('Successfully Generated logo.svg!')
-            );
-        });
-
-
-function init() {
-    generateLogoQuestions();
-};
-
-
-init();
+    <main class="work">
+        <div>
+            <a href="#">
+                <img class="website" src="./website-images/image1.png" alt="image1">
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <img class="website" src="./website-images/image2.png" alt="image2">
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <img class="website" src="./website-images/image3.png" alt="image3">
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <img class="website" src="./website-images/image4.jpg" alt="image4">
+            </a>
+        </div>
+    </main>
+    <footer>
+        <Nav>
+            <div>
+                <Section class="contact">
+                    <h3>Contacts</h3>
+                    <ul class="contact">
+                        <Li><a class="c-info" href="#860-975-7480">860-975-7480</a></Li>
+                        <Li><a class="c-info" href="#eec123manny@gmail.com">eec123manny@gmail.com</a></Li>
+                        <Li><a class="c-info" href="#">Future Placeholder</a></Li> 
+                    </ul>
+                </Section>
+            </div>
+            <div>
+                <Section class="profile-links">
+                    <h3>Profile</h3>
+                    <ul class="profile-links">
+                        <a class="p-info" href="https://www.linkedin.com/in/emmanuel-cordero-a91519195/">Linkdin</a>
+                        <a class="p-info" href="https://github.com/eecmanny">Github</a>
+                        <a class="p-info" href="#">Future Placeholder</a>
+                    </ul>
+                </Section>
+            </div>
+        </Nav>
+    </footer>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</Body>
