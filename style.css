@@ -125,14 +125,14 @@ nav div :hover {
   color: #fff;
 }
 
-/* .wImages {
-    display: flex;
-    max-width: 768px
-/*       max-width: 50%;
-      height: auto; */
-} */
+.wImages {
+/*     display: flex;
+    max-width: 768px */
+      max-width: 50%;
+      height: auto;
+}
 
-.pic1 {
+/* .pic1 {
     display: flex;
     max-width: 768px
 /*       max-width: 50%;
@@ -158,7 +158,7 @@ nav div :hover {
     max-width: 768px
 /*       max-width: 50%;
       height: auto; */
-}
+} */
 
 /* .pic5 {
     display: flex;
@@ -212,6 +212,18 @@ nav div :hover {
   display: flex;
   flex-direction: column;
 } */
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    img {
+        float: none; /* Remove the float on smaller screens */
+        margin: 0; /* Remove the margin for better centering on small screens */
+    }
+}
 
 @media screen and (max-width: 768px) {
   header {
