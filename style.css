@@ -159,34 +159,6 @@ nav div :hover {
       height: auto; */
 }
 
-/* .pic5 {
-    display: flex;
-    max-width: 768px
-/*       max-width: 50%;
-      height: auto; */
-} */
-
-/* .pic6 {
-    display: flex;
-    max-width: 768px
-/*       max-width: 50%;
-      height: auto; */
-} */
-
-/* .pic7 {
-    display: flex;
-    max-width: 768px
-/*       max-width: 50%;
-      height: auto; */
-} */
-
-/* .pic8 {
-    display: flex;
-    max-width: 768px
-/*       max-width: 50%;
-      height: auto; */
-} */
-
 .contact{
   display: flex;
   flex-direction: column;
