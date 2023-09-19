@@ -126,10 +126,11 @@ nav div :hover {
 }
 
 .wImages {
-/*     display: flex;
-    max-width: 768px */
-      max-width: 100%;
-      height: auto;
+    display: flex;
+/*     max-width: 768px */
+    max-width: 30%;
+/*       max-width: 100%;
+      height: auto; */
 }
 
 /* .pic1 {
@@ -213,17 +214,6 @@ nav div :hover {
   flex-direction: column;
 } */
 
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-    .main {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    img {
-        float: none; /* Remove the float on smaller screens */
-        margin: 0; /* Remove the margin for better centering on small screens */
-    }
-}
 
 @media screen and (max-width: 768px) {
   header {
