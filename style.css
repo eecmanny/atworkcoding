@@ -125,12 +125,68 @@ nav div :hover {
   color: #fff;
 }
 
-.wImages {
+/* .wImages {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+} */
+
+.pic1 {
     display: flex;
     max-width: 768px
 /*       max-width: 50%;
       height: auto; */
 }
+
+.pic2 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+}
+
+.pic3 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+}
+
+.pic4 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+}
+
+/* .pic5 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+} */
+
+/* .pic6 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+} */
+
+/* .pic7 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+} */
+
+/* .pic8 {
+    display: flex;
+    max-width: 768px
+/*       max-width: 50%;
+      height: auto; */
+} */
 
 .contact{
   display: flex;
