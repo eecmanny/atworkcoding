@@ -125,16 +125,16 @@ nav div :hover {
   color: #fff;
 }
 
-.wImages {
+/* .wImages {
     display: flex;
 /*     max-width: 768px */
     max-width: 46%;
     min-width: 23%;
       height: auto; */
-}
+} */
 
-/* 
-/* .pic1 {
+
+.pic1 {
     display: flex;
     max-width: 768px
 /*       max-width: 50%;
@@ -160,7 +160,7 @@ nav div :hover {
     max-width: 768px
 /*       max-width: 50%;
       height: auto; */
-} */
+}
 
 /* .pic5 {
     display: flex;
