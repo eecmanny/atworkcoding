@@ -128,11 +128,12 @@ nav div :hover {
 .wImages {
     display: flex;
 /*     max-width: 768px */
-    max-width: 30%;
-/*       max-width: 100%;
+    max-width: 46%;
+    min-width: 23%;
       height: auto; */
 }
 
+/* 
 /* .pic1 {
     display: flex;
     max-width: 768px
